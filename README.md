@@ -22,6 +22,8 @@ A collection of interactive games built using React, Tailwind CSS, JavaScript, H
 
 ## Demo
 
+Check out the live demo: [Play-Finity Live Demo](https://nishant100101.github.io/PlayFinity/)
+
 ![Screenshot 0](./src/Demo/HomePage.jpeg)
 ![Screenshot 1](./src/Demo/Tik-Tac-Toe.jpeg)
 ![Screenshot 2](./src/Demo/Memory%20Booster.jpeg)
