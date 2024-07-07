@@ -1,0 +1,116 @@
+/* DICE RUMBLE */
+.faceth {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.faceth1 {
+  background-image: url("../../../DICE_RUMBLE/COMPONENTS/Dice/Faces/F1.png");
+  background-size: cover;
+  background-position: "center";
+  transform: translateZ(30px);
+}
+
+.faceth2 {
+  background-image: url("../../../DICE_RUMBLE/COMPONENTS/Dice/Faces/F2.png");
+  background-position: "center";
+  background-size: cover;
+  transform: rotateY(90deg) translateZ(30px);
+}
+
+.faceth3 {
+  background-image: url("../../../DICE_RUMBLE/COMPONENTS/Dice/Faces/F3.png");
+  background-size: cover;
+  background-position: "center";
+  transform: rotateY(180deg) translateZ(30px);
+}
+
+.faceth4 {
+  background-image: url("../../../DICE_RUMBLE/COMPONENTS/Dice/Faces/F4.png");
+  background-size: cover;
+  background-position: "center";
+  transform: rotateY(-90deg) translateZ(30px);
+}
+
+.faceth5 {
+  background-image: url("../../../DICE_RUMBLE/COMPONENTS/Dice/Faces/F5.png");
+  background-size: cover;
+  background-position: "center";
+  transform: rotateX(-90deg) translateZ(30px);
+}
+
+.faceth6 {
+  background-image: url("../../../DICE_RUMBLE/COMPONENTS/Dice/Faces/F6.png");
+  background-size: cover;
+  background-position: "center";
+  transform: rotateX(90deg) translateZ(30px);
+}
+
+@keyframes diceRoll {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(1turn) rotateY(1turn) rotateZ(1turn);
+  }
+}
+.dice {
+  width: 80px;
+  height: 60px;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  animation: diceRoll 5s infinite;
+}
+
+/* MEMORY BOOSTER */
+.card1 {
+  animation: transform 6s linear infinite alternate-reverse;
+}
+@keyframes transform {
+  0% {
+    background-color: white;
+    filter: blur(5px);
+    transform: rotateY(0deg);
+  }
+  100% {
+    background: url("../../Photos/dog.png") center/cover;
+    transform: rotateY(180deg);
+  }
+}
+.card2 {
+  animation: transform2 6s linear 4s infinite alternate-reverse;
+}
+@keyframes transform2 {
+  0% {
+    background-color: white;
+    filter: blur(5px);
+    transform: rotateY(180deg);
+  }
+  100% {
+    background: url("../../Photos/monkey.png") center/cover;
+    transform: rotateY(0deg);
+  }
+}
+
+/* TIK-TAC-TOE */
+@keyframes diagonalLineAnimation {
+  0% {
+    width: 0;
+    left: 0;
+    top: 0%;
+  }
+  100% {
+    margin: -40px;
+    width: 150%;
+    left: 2px;
+    top: 75%;
+  }
+}
+.diagonal-line {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 100%;
+  transform: rotate(45deg);
+  animation: diagonalLineAnimation 5s infinite alternate;
+}

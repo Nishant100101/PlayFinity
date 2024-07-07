@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+@keyframes welcome-animation {
+  0% {
+    transform: scale(1);
+    border-bottom-color: brown;
+    border-bottom-width: 6px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  50% {
+    transform: scale(0.8);
+    border-bottom-color: brown;
+    border-bottom-width: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  100% {
+    transform: scale(1.1);
+    border-bottom-color: brown;
+    border-bottom-width: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.animate-welcome {
+  animation: welcome-animation 2s ease-in-out alternate-reverse infinite;
+  border-bottom: 2px solid brown;
+}
+
+/* More To come */
+.clk {
+  filter: blur(2.5px);
+}
+
+.clk:hover {
+  filter: blur(1px);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16ch;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+.textAni {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-right: 2px solid;
+  animation: typing 5s steps(25, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+.clk:hover ~ .textAni {
+  animation: none;
+}
+
+.textAni:hover {
+  animation: none;
+}

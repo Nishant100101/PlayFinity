@@ -1,0 +1,77 @@
+.boxex {
+  opacity: 0;
+  filter: blur(100px);
+  width: 80%;
+  height: 80%;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.opt {
+  opacity: 1;
+  cursor: default;
+  filter: blur(0px);
+  transform: rotateY(180deg);
+  animation: rotate-animation 1s ease-in-out;
+}
+@keyframes rotate-animation {
+  0% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(180deg);
+  }
+}
+
+/* CONGRATS MESSAGE */
+.winner-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 1rem;
+  animation: slideIn 0.5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #333333;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.celebration-shape {
+  position: absolute;
+  top: -60px;
+  left: 41%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid #ffcc00;
+}
+
+/* INSTRUCTION */
+@keyframes infomoveUpAndDown {
+  0% {
+    transform: translateY(-35px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.upDown {
+  animation: infomoveUpAndDown 0.5s ease-in-out 2 alternate-reverse;
+}
